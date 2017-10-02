@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRooting } from './app.routing';
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import {HeroService} from "./heroes/shared/hero.service";
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import {HeroService} from "./heroes/shared/hero.service";
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRooting
   ],
   providers: [HeroService],
