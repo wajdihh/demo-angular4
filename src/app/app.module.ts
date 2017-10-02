@@ -5,19 +5,22 @@ import { AppRooting } from './app.routing';
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
 import { HeroListComponent } from './heroes/hero-list/hero-list.component';
+import { DashboardComponent } from './shared/dashboard/dashboard.component';
+import {HeroService} from "./heroes/shared/hero.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    HeroListComponent
+    HeroListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRooting
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
