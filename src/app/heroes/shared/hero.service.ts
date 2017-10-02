@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import {HEROES} from '../shared/dump-hero';
 import {Hero} from "./hero.model";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-
+import {HttpClient} from "@angular/common/http";
+import { environment } from '../../../environments/environment';
 @Injectable()
 export class HeroService {
 
-  baseUrl:string = "http://test.api.partagi.tn";
+  baseUrl:string = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
